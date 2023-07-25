@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Variables Basics</title>
+        <link rel="shortcut icon" href="JavaScript-logo.png" type="image/x-icon">
+        <style>
+            body {
+                border: 5px inset #5555;
+                padding: 30px;
+                margin: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Variable Basics In JavaScript</h1>
+        <hr><hr>
+        
+        <div>
+            <h2>var, let and cosnt keywords</h2>
+            <h3>var keyword is used to initalize a variable but it is used for old browsers</h3>
+            <p>We can change value of variables that initalized with var keyword</p>
+            <script>
+                var a = 10;
+                var b = 15;
+                var c = a + b;
+                a = 50;
+                b = 20;
+                document.write("Sum of a & b = "+ c );
+                document.write(` | Value of a = ${a} & b = ${b}`);
+                document.write(" | We can change variable value when it initalized with var keyword");
+            </script>
+        </div>
+        <br><br>
+
+        <div>
+            <h3>var keyword is also used to initalize a variable and it is used in latest browsers and recent time</h3>
+            <p>We can also change value of variables that initalized with var keyword</p>
+            <script>
+                let x = "Hello";
+                let y = "World!";
+                let z = x + " " + y;
+                x = "Java";
+                y = "Script";
+                document.write("let x & let y both togather = "+ z);
+                document.write(" | value of x = "+ x + " & value of y = "+ y);
+            </script>
+        </div>
+        <br><br>
+
+        <div>
+            <h3>const keyword is used for initalize a variable that value is constant or will not be changed</h3>
+            <p>We can not change the value of variable after it is declared</p>
+            <script>
+                const pi = 3.14;
+                const year = 2023;
+                // pi = 10;
+                // year = 2030;
+                document.write("value of pi is constant : " + pi + " | And value of year is constant : " + year);
+            </script>
+        </div>
+        <br>
+
+        <script src="Variable-In-JS.js"></script>
+    </body>
+</html>
