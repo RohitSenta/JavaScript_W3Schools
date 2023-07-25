@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=3, initial-scale=1.0">
+        <title>JS Bacis Concepts</title>
+        <link rel="shortcut icon" href="JavaScript-logo.png" type="image/x-icon">
+        <style>
+            body {
+                border: 5px solid #5555;
+                padding: 30px;
+                margin: 20px;
+            }
+        </style>
+        <script>
+            function myFunction1() {
+                document.getElementById('demo6').innerHTML = "This is a changed paragraph !!!";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>JavaScript Basic Concepts</h1>
+        <hr><hr>
+
+        <div>
+            <h2>What can do JavaScript ???</h2>
+
+            <div>
+                <h3>JavaScript Can Change HTML Element</h3>
+                <p id="demo1">Hello World!!!</p>
+                <button type="button" onclick="document.getElementById('demo1').innerHTML = 'Hello JavaScript!!!'">Click Me</button> 
+            </div>
+            <br>
+
+            <div>
+                <h3>JavaScript can change HTML style(CSS)</h3>
+                <p id="demo2">Hello World!!!</p>
+                <button type="button" onclick="document.getElementById('demo2').style.fontSize = '30px'">Click Me!</button>
+            </div>
+            <br>
+
+            <div>
+                <h3>JavaScript can hide the HTML Elements.</h3>
+                <p id="demo3">Hello World!!!</p>
+                <button type="button" onclick="document.getElementById('demo3').style.display='none'">Click Me!</button>
+            </div>
+            <br>
+
+            <div>
+                <h3>JavaScript can show the HTML Elements.</h3>
+                <p id="demo4" style="display: none;">Hello World!!!</p>
+                <button type="button" onclick="document.getElementById('demo4').style.display='block'">Click Me!</button>
+            </div>
+            <br>
+        </div>
+        <hr>
+
+        <div>
+            <h2>Where to add  JavaScript ???</h2>
+
+            <div>
+                <h3>The &lt; script &gt; Tag in the &lt; body &gt Tag</h3>
+                <p id="demo5"></p>
+                <script>
+                    document.getElementById('demo5').innerHTML = "Hello JavaScript! This Is My First JS Program!!!";
+                </script>
+            </div>
+            <br>
+
+            <div>
+                <h3>JavaScript Inside &lt; head &gt; Tag</h3>
+                <p id="demo6">This is a paragraph</p>
+                <button type="button" onclick="myFunction1()">Click Me!</button>
+            </div>
+            <br>
+
+            <div>
+                <h3>External JavaScript</h3>
+                <p id="demo7">Hello World!!!</p>
+                <button type="button" onclick="myFunction2()">Click Me!!</button>
+            </div>
+            <br>
+        </div>
+        <hr><hr>
+
+        <script src="JS-Basic-Concepts.js"></script>
+    </body>
+</html>
