@@ -93,3 +93,51 @@ console.log("Cars4 Array Deleting Elements :", delete cars4[0], delete cars4[1])
 console.log("Cars4 Array After Delete Elements :", cars4);
 console.log("==========================================");
 console.log("\n\n");
+
+
+// Merging (Concatenating) Arrays Method
+console.log("Merging(conscatenating) Arrays Method \n\n");
+let cars5 = ["Tata", "Mahindra", "Honda"];
+let cars55 = ["Ford", "Toyota", "BMW", "Dodge"];
+console.log("cars5 =", cars5);
+console.log("cars5 =", cars55);
+let newCars5 = cars5.concat(cars55);
+console.log("After Concatinate cars5 + cars55 = newCars5 =", newCars5);
+console.log("==========================================");
+console.log("\n\n");
+
+
+// Flating Method
+console.log("Flating Method \n\n");
+let nums1 = [ [1, 2, 3],[4, 5, 6],[7, 8, 9] ];
+console.log("Nums1 =", nums1);
+let flatNums1 = nums1.flat();
+console.log("Nums1 After Flating =", flatNums1);
+console.log("==========================================");
+console.log("\n\n");
+
+
+// Spilce Method
+console.log("Spilce Method \n\n");
+const cars6 = ["Maruti Suzuki", "Honda", "Ford", "Toyota", "BMW", "Dodge"];
+console.log("cars6 =", cars6);
+let newCars6a = cars6.splice(0, 1);
+console.log("cars6 After Splice 0th Element =", cars6);
+let newCars6b = cars6.splice(1, 0, "Tata", "Mahindra");
+console.log("cars6 After Adding Elenments By Splice =", cars6);
+console.log("==========================================");
+console.log("\n\n");
+
+
+// Slice Method
+console.log("Slice Method \n\n");
+const cars7 = ["Maruti Suzuki", "Honda", "Ford", "Toyota", "BMW", "Dodge"];
+console.log("cars7 =", cars7);
+let newCars7 = cars7.slice(1);
+console.log("cars7 After slice =", newCars7);  
+newCars7 = cars7.slice(1, 4);
+console.log("cars7 After  slice =", newCars7);
+console.log("==========================================");
+console.log("\n\n");
+
+
