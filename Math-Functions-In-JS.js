@@ -113,6 +113,28 @@ console.log("\n\n");
 console.log("Math.random() Method \n\n");
 let num9 = Math.random() + 1;
 console.log("random(num9) =", num9);
+
+num9 = Math.floor(Math.random() * 10);
+console.log("random integer number from 0 to 9 :", num9);
+num9 = Math.floor(Math.random() * 11);
+console.log("random integer number from 0 to 10 :", num9);
+num9 = Math.floor(Math.random() * 101);
+console.log("random integer number from 0 to 100 :", num9);
+num9 = Math.floor(Math.random() * 10) + 1;
+console.log("random integer number from 1 to 10 :", num9);
+num9 = Math.floor(Math.random() * 100) + 1;
+console.log("random integer number from 1 to 100 :", num9);
+
+function getRandNum(min, max) {
+    num9 = Math.floor(Math.random() * (max - min)) + min;
+}
+getRandNum(6, 11);
+console.log("random integer number 5(min) to 10(max) :", num9);
+function getRandNum2(min, max) {
+    num9 = Math.floor(Math.random() * (max - min + 1)) + min;
+}
+getRandNum2(5, 10);
+console.log("random integer number 5(min) to 10(max) :", num9);
 console.log("===============================================");
 console.log("\n\n");
 
