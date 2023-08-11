@@ -103,6 +103,7 @@ console.log("\n\n");
 // Math Min And Max Method
 console.log("Math.min() Method \n\n");
 let nums = [20, 34, 25, 75, 65, 45];
+console.log("Arr =", nums);
 console.log("min(arr) =", Math.min(20, 34, 25, 75, 65, 45));
 console.log("max(arr) =", Math.max(20, 34, 25, 75, 65, 45));
 console.log("===============================================");
