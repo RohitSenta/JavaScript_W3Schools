@@ -25,3 +25,19 @@ myPromise.then(
 function myDisplay(result) {
     console.log(result);
 }
+console.log("\n\n");
+
+
+// Promise with timeout 
+setTimeout(() => {
+    console.log("\n\nPromise with timeout \n\n");
+}, 1000);
+
+const myProm = new Promise(function (myResolve, myReject){
+    setTimeout(function(){
+        myResolve("I Love Coding !!");
+    }, 3000);
+});
+myProm.then(function(value) {
+    console.log(value);
+});
