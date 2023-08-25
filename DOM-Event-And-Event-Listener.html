@@ -5,18 +5,87 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>DOM - Event And Event Litsener</title>
         <link rel="shortcut icon" href="JavaScript-logo.png" type="image/x-icon">
+        <style>
+            .div1, .div2{
+                background-color: coral;
+                padding: 30px;
+                margin: 20px;
+            }
+            .myp1, .myp2 {
+                background-color: white; 
+                font-size: 20px;
+                border: 1px solid;
+                padding: 20px;
+            }
+        </style>
     </head>
     <body>
         <h1>DOM - Event And Event Listener</h1>
         <hr><hr>
 
-        <h2 onclick="changeText(this)">Hello World! - Click Me</h2>
+        <div>
+            <h3>DOM Events</h3>
+
+            <h4 onclick="changeText(this)">Hello World! - Click Me</h4>
+            <hr>
+    
+            <p>Click the below button to display Date and Time</p>
+            <button onclick="displayDate()">What's Date & Time ??</button>
+            <p class="date">Date And Time Is ...</p>
+            <hr>
+    
+            <p>Onchange Event</p>
+            <p>Enter Your Name : 
+                <input type="text" name="fname" id="fname" onchange="upperCase()">
+            </p>
+            <hr>
+    
+            <div style="background-color: brown; width: 220px; height: 20px; font-size: larger; color: white; padding: 40px; margin: 20px   ;" onmouseover="mOver(this)" onmouseout="mOut(this)">
+                Mouse Over Me
+            </div>
+            <hr>
+    
+            <div style="background-color: brown; width: 220px; height: 20px; font-size: larger; color: white; padding: 40px; margin: 20px   ;" onmousedown="mDown(this)" onmouseup="mUp(this)">
+               Click Me !!!
+            </div>
+            <hr>
+
+
+        </div>
+        <hr><hr>
+
+        <div>
+            <h3>DOM Event-Listener</h3>
+            <p>Click Below Button To Promt Hello World!</p>
+            <button class="btn1">Click Me </button>
+        </div>
+        <br><hr>
+
+        <div class="box" type="submit" style="background-color: green; color: white; padding: 30px; width: 100px; margin: 20px;">
+            BOX
+        </div>
         <hr>
 
-        <p>Click the below button to display Date and Time</p>
-        <button onclick="displayDate()">What's Date & Time ??</button>
-        <p class="date">Date And Time Is ...</p>
-        <hr>
+        <div>
+            <p>Resize The Window To Change Random Number : </p>
+            <p id="num">Random Number : 5</p>
+            <button class="remove">Remove Event</button>
+        </div>
+        <br><hr>
+
+        <div>
+            <div class="div1">
+                <h3>Event Bubbling</h3>
+                <p class="myp1">Click Me!</p>
+            </div>
+
+            <div class="div2">
+                <h3>Event Capturing</h3>
+                <p class="myp2">Click Me!</p>
+            </div>
+        </div>
+        <hr><hr>
+        <br><br>
 
         <script src="DOM-Event-And-Event-Listener.js"></script>
     </body>
