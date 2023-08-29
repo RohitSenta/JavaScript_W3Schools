@@ -78,3 +78,80 @@ sessionStorage.setItem("name", "Hello World!");
 let p5 = document.querySelector("#p5");
 p5.innerText = sessionStorage.getItem("name");
 
+
+// Web Worker API 
+let btn5a = document.querySelector("#btn5a");
+btn5a.addEventListener("click", startWorker);
+let btn5b = document.querySelector("#btn5b");
+btn5b.addEventListener("click", stopWorker);
+
+let w;
+function startWorker() {
+    if(typeof(w) == "undefined") {
+        w = new Worker("API-Web-Worker-File.js");
+    }
+    w.onmessage = function(event) {
+        let result = document.querySelector("#ans");
+        result.innerText = event.data;
+    }
+}
+
+function stopWorker() {
+    w.terminate();
+    w = undefined;
+}
+
+
+// Fatch API
+let link = "https://catfact.ninja/fact";
+let finlaAns = document.querySelector("#cat");
+
+fetch(link)
+.then(x => x.text())
+.then(y => finlaAns.innerText = "Fact 1 = " + JSON.parse(y).fact);
+
+
+let catFact2 = document.querySelector("#catFact2");
+async function catFacts(link) {
+    let myObject = await fetch(link);
+    let myText = await myObject.text();
+    catFact2.innerText = "Fact 2 = " + JSON.parse(myText).fact;
+}
+catFacts(link);
+
+
+// GeoLocation API
+
+let getLoc = document.querySelector("#getLoc");
+getLoc.addEventListener("click", getLocation);
+const locate = document.querySelector("#locate");
+
+function getLocation() {
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        locate.innerText = "GeoLocation Is Not Supported By this browser";
+    }
+}
+
+function showPosition(position) {
+    locate.innerText = "Latitude : " + position.coords.latitude + 
+    "\nLongitube : " + position.coords.longitude;
+}
+
+function showError(error) {
+    switch (error.code) {
+        case error.PERMISSION_DENIED:
+            locate.innerText = "User denied the request for GoeLocation";
+            break;
+        case error.POSITION_UNAVAILABLE:
+            locate.innerText = "Location information is unavailable";
+            break;
+        case error.TIMEOUT:
+            locate.innerText = "The request to get user location timed out";
+            break;
+        case error.UNKNOWN_ERROR:
+            locate.innerText = "An unknown error occurred";
+            break;
+    }
+}
